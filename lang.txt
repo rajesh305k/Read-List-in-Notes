@@ -1,0 +1,26 @@
+sleep ---- 3:30 
+wakeup ---- 10:00
+office ---- 11;35
+game --- total 2hrs ( full day lo) 
+night room ---- 11:30 to 12: 30   game (1hr) 
+                12:30 to 1: 15 ----> LINUX  CYBERSECURITY 
+                1:15  to 2:30  ----> javascript , css , html
+                2:30  t 3:00 -----> revision servicenow (docs ) 
+                3:00 to 3:30 ----> recreation 
+ 
+
+
+holiday timings 
+
+wakeup ---> 11:30 
+sn ----> 6hrs holiday timings (11:30 to 4:30)
+break ----> 1hr ---->anything 
+sleep ----> 12:30
+dutch language ----> 10 mins 
+
+
+goal sn expert 
+
+
+
+

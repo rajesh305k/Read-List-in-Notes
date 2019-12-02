@@ -1,0 +1,46 @@
+//client script
+	var ga = new GlideAjax('AjaxScriptInclude'); //This argument should be the exact name of the script include. 
+
+	ga.addParam('sysparm_name', 'greetingFunction'); //sysparm_name is the name of the function in the script include to call.
+
+	ga.addParam('sysparm_my_name', "Tim"); //This is an optional parameter which we can reference in the script include. 
+
+	ga.getXML(myCallBack); //This is our callback function, which will process the response.
+
+
+	function myCallBack(response)
+	 { 
+	//the argument 'response' is automatically provided when the callback funciton is called by the system.
+    //Dig out the 'answer' attribute, which is what our function returns. 
+    
+	var greeting = response.responseXML.documentElement.getAttribute('answer'); 
+   
+ alert(greeting); //alert the result to make sure all is well.
+}
+
+
+
+
+
+Script Include 
+
+//client-callable script include
+var AjaxScriptInclude = Class.create(); //(auto generated)
+
+AjaxScriptInclude.prototype = Object.extendsObject(AbstractAjaxProcessor, { //(auto generated)
+    
+greetingFunction: function() { //Declare a function inside our class.
+        
+var userName = this.getParameter('sysparm_my_name'); //Get the parameter we passed in from the client script
+      
+  return 'Hiya, ' + userName + '.'; //return a friendly greeting
+    }
+});
+
+
+
+script include  must extends* AbstractAjaxProcessor,*( must be client callable )
+
+*** You should never use a callback function in an onSubmit script. 
+
+

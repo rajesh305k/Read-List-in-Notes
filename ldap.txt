@@ -1,0 +1,57 @@
+ldap 
+lightweight directory access protocol 
+ldap 
+integration 
+
+
+ldap 
+light weight directory access protocol
+ldap 
+light weight directory access protocol
+
+ldap 
+light weight directory access protocol 
+
+active directory is like a database that has the functionality of user management , accounting and more 
+in simple ways 
+ldap is application protocol which can talk to active 
+directory (modifying and quering informatin about active directory) 
+
+
+*
+Lightweight Directory Access Protocol (LDAP) is an internet protocol works on TCP/IP, used to access information from directories. LDAP protocol is basically used to access an active directory.
+
+Features of LDAP:
+
+Functional model of LDAP is simpler due to this it omits duplicate, rarely used and esoteric feature.
+It is easier to understand and implement.
+It uses strings to represent data
+\
+
+
+votes
+Lightweight Directory Access Protocol or LDAP, is a standards based specification for interacting with directory data. Directory Services can implement support of LDAP to provide interoperability among 3rd party applications.
+
+Active Directory is Microsoft's implementation of a directory service that, among other protocols, supports LDAP to query it's data.
+
+While it supports LDAP, Active Directory provides a host of extensions and conveniences, such as password expiration and account lockout
+
+
+
+I will focus on why using LDAP, not what is LDAP.
+
+The use model is similar like how people use library cards or phonebooks. When you have a task that requires “write/update once, read/query many times”, you might consider using LDAP. LDAP is designed to provide extremely fast read/query performance for a large scale of dataset. Typically you want to store only a small piece of information for each entry. The add/delete/update performance is relatively slower compared with read/query because the assumption is that you don’t do “update” that often.
+
+Imagine you have a website that has a million registered users with thousands of page requests per second. Without LDAP, every time users click a page, even for static page viewing, you will probably need to interact with your database to validate the user ID and its digital signature for this login session. Obviously, the query to your database for user-validation will become your bottleneck. By using LDAP, you can easily offload the user validation and gain significant performance improvement. Essentially, in this example, LDAP is another optimization layer outside your database to enhance performance, not replacing any database functions.
+
+LDAP is not just for user validation, any task that has the following properties might be a good use case for LDAP:
+
+You need to locate ONE piece of data many times and you want it fast
+
+You don’t care about the logic and relations between different data
+
+You don’t update, add, or delete the data very often
+
+The size of each data entry is small
+
+You don’t mind having all these small pieces of data at a centralized place

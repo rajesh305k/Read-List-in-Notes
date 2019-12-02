@@ -1,0 +1,30 @@
+<source lang = "javascript" >
+g_form.addDecoration('caller_id', 'icon-star','preferred member');
+
+
+it will return void means nothing 
+
+
+
+<source lang = "javascript" >
+
+use the function getLabelOf(fieldname )
+
+if(g_user.hasRole(itil))
+{
+
+
+var oldLabel = g_form.getLabelOf('comments');
+
+g_form.setLabelOf('comments', oldLabel +'(Customer visibe )');
+
+this sets the label to comments customer visibe 
+
+
+getValue gives sys_id
+then we have to use 
+getDisplayValue(fieldname);
+
+*
+g_form.getUniqueValue ()will return the sys_id and g_form.getValue('u_name')
+ will return the field value.If it is a referenced field then write g_form.getDisplayValue('u_name');

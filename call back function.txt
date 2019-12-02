@@ -1,0 +1,92 @@
+
+
+
+
+normal procedure 
+
+
+****
+
+submit query ---> internet ---> server database ---> builds ajax response ---> client side logic ---> response sent back ---> internet ---> user interacts with browser 
+
+
+****
+When using call back function
+
+submit query ---> internet ---> *** user interact with browser ---> server databse ---> builds ajax response ----> response sent back ---> internet ---> the call back function is called --->
+
+any additional client work is done inside the call back funtion ,--> browser .
+
+
+
+script 
+
+var gr = new GlideRecord('incident');
+gr.addQuery('state', 2);
+gr.query(doAlert);
+// call back function is doAlert
+
+function doAlert(gr){
+
+while(gr.next())
+{
+
+//some conditions 
+}
+}
+
+we have done query asychronus 
+
+
+g_form.getReference  also supports callback function 
+
+g_form.getReference(string fieldname , call back function);
+
+script 
+
+
+
+
+
+//g_form.getReference('assigned_to'); <-- Synchronous usage. Bad for performance! 
+
+g_form.getReference('assigned_to', cbFunc);
+
+function cbFunc(gr) {
+    var assignedToName = gr.getValue('name');
+    Alert('This ticket is assigned to: ' + assignedToName + '.');
+}
+
+
+
+g_form using call back function in the script 
+var gr= new GlideRecord('incident');
+
+g_form.getReference('assigned_to', cbFunc);
+
+
+function cbFunc(gr)
+{
+
+var assignedName = gr.getValue('name');
+
+alert('This ticket is assigned to : "+assignedName " );
+}
+
+
+
+43.654442,-79.382112
+
+
+
+
+
+
+
+
+
+
+
+
+
+

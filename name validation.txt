@@ -1,0 +1,12 @@
+validateForm()
+{
+
+
+var x=document.forms["myForm"]["fname"].value 
+if(x=="")
+{
+
+alert("Please input any value in the field ");
+return false;
+}
+}

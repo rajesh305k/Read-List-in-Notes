@@ -1,0 +1,23 @@
+Hi Pavan,
+
+
+        Regarding task , sla is mainly about the service agreement between customer and service provider its mainly concentrates on the uptimes and the 
+performance where as ola is mainly about OLA is an agreement in respect to maintenance and other services.
+
+Service Level Agreement is applied to the overall ticket resolution proces
+
+he Service Level Agreement is applied to the overall ticket resolution process. It is also based on the service contract with the customer. On the other hand, Operational Level Agreements are not applied to the overall ticket resolution process.
+
+Read more: Difference Between OLA and SLA | Difference Between http://www.differencebetween.net/misc
+ellaneous/difference-between-ola-and-sla/#ixzz64VW68MIv
+
+
+incident state           sla         incident_task state          ola 
+new                     attached                    -                     -
+
+IN progress in support   paused           created (open)         attached (open)
+terms 
+
+review                   inprogress          closed complete      stopped 
+
+

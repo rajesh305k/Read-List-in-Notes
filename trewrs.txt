@@ -1,0 +1,18 @@
+addJoinQuery (jointable , primarytablefield , jointablefield );
+
+
+
+var gr = new GlideRecord('incident');
+
+var grr= gr.addJoinQuery('problem');
+
+gr.addQuery('active', 'true');
+grr.addConditon('active','false');
+gr.query();
+while(gr.next())
+{
+
+gs.info(gr.getValue('number');
+
+}
+

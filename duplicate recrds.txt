@@ -1,0 +1,65 @@
+ Group the user role records by user/role combo
+
+
+
+var userRoleGA = new GlideAggregate('sys_user_has_role');
+
+
+
+userRoleGA.groupBy('user');
+
+
+
+userRoleGA.groupBy('role');
+
+
+
+userRoleGA.query();
+
+
+
+var userRoleGR;
+
+
+
+while (userRoleGA.next()) {
+
+
+
+     // Fetch the records for this user/role pair
+
+
+
+     userRoleGR = new GlideRecord('sys_user_has_role');
+
+
+
+     userRoleGR.addQuery('user', userRoleGA.user);
+
+
+
+     userRoleGR.addQuery('role', userRoleGA.role);
+
+
+
+     userRoleGR.query();
+
+
+
+     userRoleGR.next(); // Skip the first result
+
+
+
+     while (userRoleGR.next()) { // delete the rest
+
+
+
+             userRoleGR.deleteRecord();
+
+
+
+     }
+
+
+
+}

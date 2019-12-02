@@ -1,0 +1,33 @@
+*Domain separation enables you to separate data, processes, 
+and administrative tasks into logical groupings called domains.
+ You can then control several aspects of this separation, 
+including which users can see and access data.
+
+*The [new_call] table supports domain separation. 
+new_call is table is created when service desk plugin is activated 
+
+
+__ITIL/Fulfillers see only those new_call records that have been created within the (tenant) domain that they belong to.
+
+Domain separated tables
+
+Calls [new_call]
+Use cases
+An ITIL/Fulfiller creates new_call records only in those domains to which they have access.
+When a new_call record is converted into a Request / Incident / Problem / Change, and so on, the corresponding record is created in the same domain as that of the associated new_call record.
+**An ITIL/Fulfiller can create a new_call record only for those callers who belong to the domains to which they have access.
+
+tasks by same caller or company(these are used to check duplicate records )
+itil records or new_call table records ,
+All active incidents, problems, changes, and service catalog requests for that caller or company are listed.
+
+The *Tasks by Same Caller list shows all active records where the value in the Caller field on the Call form matches the value in:
+-->The Caller field on the Incident form.
+-->The Opened by field on the Problem form.
+-->The Requested by field on the Change Request form.
+-->The Requested for field on the service catalog Request form.
+**The Tasks by Same Company list shows all active records where the value in the Company field on the Call form matches the value in:
+The company of the caller on the Incident form.
+The company of the user that opened the problem on the Problem form.
+The company of the user that requested the change on the Change form.
+The company of the user the request was made for on the service catalog Request form.

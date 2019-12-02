@@ -1,0 +1,93 @@
+https://neptuneenergydev.service-now.com/ 
+https://cognizantcorp.webex.com/join/PAVANKUMAR.YAKKALA
+https://vdi.neptuneenergy.com 
+ https://neptuneenergydev.service-now.com <https://neptuneenergydev.service-now.com/> /login.do
+User Id: a_Rajesh
+Password: 12345
+
+
+
+
+
+Client Scripts (g_form , getReference ) ----> it is used to custmozie forms using javascript 
+
+g_form.getReference(fieldname , callback function);
+g_form.getReference(fieldname);
+
+
+*
+If you're using getReference you will get ALL data for each record you "get" whether you need it or not.
+
+
+*If you're using GlideAjax you only get what you need, 
+because you will explicitly return the exact information you need and nothing else. **
+
+
+
+
+
+
+
+*
+
+you can use the getReference() to glide that particular record from client side and 
+access the related record of that Glide Object, you can find the more details here: GlideForm - Client
+
+
+client ---->getReference <----- glideObject (interface interactions)
+
+
+getReference gets the record used in another reference field. For example you have the Caller ID (reference to the sys_user table) and with getReference, you will retrieve the User record and save this as a gliderecord into a variable. The main reason to use this function is to get more information from the referenced record.
+
+
+
+Since this is used client side, it IS a call to the server which may impact performance if used too heavily.
+
+
+
+Example:
+
+
+var gr = g_form.getReference('caller_id');
+
+
+alert('Caller Email is: ' + gr.email);
+
+
+
+Since this is a server call, as already said above, I would recommend using the callback feature (new in Aspen):
+
+
+var caller = g_form.getReference('caller_id', doAlert); // doAlert is our callback function
+
+
+
+function doAlert(caller) { //reference is passed into callback as first arguments
+
+
+alert('Caller Email is: ' + caller.email);
+
+
+}
+
+
+
+
+19.112315,72.837952
+
+
+
+
+
+
+
+
+
+
+
+g
+
+
+
+
+

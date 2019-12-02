@@ -1,0 +1,67 @@
+function onChange(control, oldValue, newValue, isLoading) {
+	if (isLoading || newValue == '') {
+		return;
+	}
+	
+	var cdt = g_form.getValue('start_date');
+	
+	
+	var sdt = g_form.getValue('end_date');
+	
+	
+	var dttype = 'minute'; //this can be day, hour, minute, second. By default it will return seconds.
+	
+	
+	
+	var ajax = new GlideAjax('MyDateTimeAjax');
+	
+	
+	ajax.addParam('sysparm_name','getDateTimeDiff');
+	
+	
+	ajax.addParam('sysparm_fdt', cdt);
+	
+	
+	ajax.addParam('sysparm_sdt', sdt);
+	
+	
+	ajax.addParam('sysparm_difftype', dttype);
+	
+	
+	ajax.getXML(checkdate);
+	
+	
+	function checkdate(response){
+		
+		
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+		
+		
+		if (answer <= 0 ){
+			
+// 			if(window==null)
+// 				{
+// 				g_form.hideFieldMsg('to');
+// 			    g_form.showFieldMsg("to",'Please select a "To" date that is later than the "From" date',"error");
+// 				g_form.clearValue('to');
+// 			}
+// 			else
+// 				{
+			//alert('check');
+				g_form.hideFieldMsg('end_date');
+				g_form.clearValue('end_date');
+				g_form.showFieldMsg("end_date",'Please select a "To" date that is later than the "From" date',"error");
+				
+// 			}
+				
+		}
+		//
+		else{
+			g_form.hideFieldMsg('end_date');
+		}
+		
+	}
+	
+
+
+}

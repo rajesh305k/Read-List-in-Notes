@@ -1,0 +1,6 @@
+testing of the catalog
+
+workflow --- standard workflow 
+variable check on form 
+ticket compar dev vs test 
+defects

@@ -1,0 +1,79 @@
+function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+
+
+   if (isLoading || newValue === '') {
+
+
+   return;
+
+
+   }
+
+
+   var inpt = g_form.getValue('u_test');
+
+
+   validateDecimal(inpt);
+
+
+
+   function validateDecimal(value)       {
+
+
+   var RE = /^\s*-?[1-9]\d*(\,\d{1,2})?\s*$/;
+
+
+   if(RE.test(value)){
+
+
+   g_form.addInfoMessage('Correct input');
+
+
+   return true;
+
+
+   }else{
+
+
+   g_form.addInfoMessage('Illegal chars');
+
+
+   return false;
+
+
+   }
+
+
+   }
+
+
+}
+
+----------------------------------------
+
+function onChange(control, oldValue, newValue, isLoading) {
+
+
+   if (isLoading || newValue == '') {
+
+
+           return;
+
+
+   }
+
+
+
+   if(!isNumber(newValue)){
+
+
+   alert('Please enter a number only in this field.');
+
+
+   g_form.setValue('u_my_field', '');
+
+
+   }
+
+
+}

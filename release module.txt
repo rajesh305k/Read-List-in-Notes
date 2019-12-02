@@ -1,0 +1,11 @@
+loading dates in the release module 
+go to release module 
+right click on column 
+upload xml
+preview it 
+and commit it 
+verify
+day release ----> 8:00 to 17:00( same day)
+night release ---> 17:00 to 8:00 (another day )
+
+verify the excel sheets and upload 

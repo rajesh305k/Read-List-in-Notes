@@ -1,0 +1,32 @@
+
+
+create a string field 
+
+
+function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+
+
+        if (isLoading || newValue === '') {
+
+
+                  return;
+
+
+        }
+
+        var newwvalue = g_form.getValue('excepted_downtime_in_hours');
+
+        var regexp = /^[\d\.]+$/;
+
+
+
+        if(!regexp.test(newwvalue)) {
+
+
+                  alert('Only numbers and dot allowed');
+
+
+                  g_form.setValue('excepted_downtime_in_hours','');
+
+
+        }    

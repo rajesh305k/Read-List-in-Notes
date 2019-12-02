@@ -1,0 +1,28 @@
+glidedbfunctionbuilder ---> Class
+
+addFunction(object function)----> gliderecord method
+
+add();
+field(string name);
+build();
+multiply();
+divide();
+dayOfWeek(integer);
+integer ----> 1 (sunday starts )
+integer ---> 2 ( monday ) 
+
+more than 2 or default ---> sunday starts 
+
+concat();
+constant( string name );
+datediff();
+substract();
+length();
+
+*You can set the glide.invalid_query.returns_no_rows 
+system property to true to have queries with invalid encoded queries return no records.
+
+addJoinQuery(String joinTable, Object primaryField, Object joinTableField)
+
+var mg = new GlideRecord('problem');
+mg.addJoinQuery('incident');

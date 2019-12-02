@@ -1,0 +1,32 @@
+glide record queries with get shortcut 
+
+we are using get();
+method --> in this script 
+getting a contact for the user 
+
+
+business rule Advanced Script 
+
+
+(function executeRule(current , previous)
+
+{
+
+
+var grUser = new GlideRecord('sys_user');
+//creating the object for the table user 
+
+
+//get printer contact user record 
+
+grUser.get('PASTE_USER_SYS_ID_HERE');
+
+var msg = current.description+ "\n\n This incident includes 'printer' in the Short description .if you need assistanace from the leasing company, 
+
++grUser.name +" by email at " + grUser.email+"or by phone at  " + grUser.phone + "." );
+
+
+current.setValue('description', msg);
+})
+
+(current, previous);

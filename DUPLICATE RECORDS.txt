@@ -1,0 +1,17 @@
+Var duplicate = new GlideAggregate('cmdb_ci_server');
+duplicate.groupBy('name');
+duplicate.query();
+while(duplicate.next()) {
+	var duplicate1 = new GlideRecord('cmdb_ci_server');
+	duplicate1.addQuery('name', duplicate.name);
+	duplicate1.query();
+	duplicate1.next();
+	while(duplicate1.next()){
+		var task_tab = new GlideRecord ('task');
+		task_tab.addQuery('cmdb_ci', duplicate1.sys_id);
+		task_tab.query();
+		if (!task_tab.next()){
+			duplicate1.deleteRecord();
+		}
+	}
+}

@@ -1,0 +1,5 @@
+methods in glide ajax api
+
+addParam(String parm_name, String parm_value);
+first call to addparam should be sysparm_name ( server side method in the script include )
+

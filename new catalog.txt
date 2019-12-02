@@ -1,0 +1,61 @@
+service catalog 
+
+
+Access category
+
+shared drive access        --> first field is shared drive location (not present in excel)
+shared mail box            ---> all fields present in excel 
+connect access             ---> all works 
+added to distribution list ---> all works
+application access         ---> all works
+wifi permanent access      ---> all works
+
+
+Services (category)
+
+
+it loan equipment          ---> lot of extra varibles which are not active (5) 
+                                type of equipment , from , to , applications/application  to be installed 
+
+                           ---> catalog ui policy on applicaitons installed field (not active field )
+                           ---> catalog onchange  client script not validating the present date fields 
+
+move individual workspace  ---> 3 variables are active is false (no add scripts )
+restore file or folder     ---> all works 
+vendor master data request ---> in the excel third field is vendor form (file upload ) label
+                                but in catalog it is present in fourth place 
+
+
+Others (category)
+
+no variables are found in excel sheet (stated that no changes are made only moved )   
+
+software (category)
+
+software installatioan     ---> works 
+new software               ---> works 
+software update            ---> works 
+
+
+
+workplace equipment (category)
+
+company mobile phone       ---> two ui policy are true (not on active field)
+                                one client script (mandatory reason for reqest )
+desk phone                 ---> all are present 
+laptop                     ---> all are present (one ui policy not on active field and client script not active )
+                                reason for request field is mandatory in variables 
+new workplace item         ---> all are present 
+
+new workplace setup        ---> first field dropdown(phone headset spelling is wrong )
+
+
+REQ0016978 (MY requests FOR ALL ITEMS IN DEV )
+REQ0016979 REQ0016980 REQ0016981 REQ0016982 REQ0016983 REQ0016984 REQ0016985 REQ0016986 REQ0016987 
+REQ0016988 REQ0016989 REQ0016990 REQ0016991                    
+
+ 
+
+
+
+              

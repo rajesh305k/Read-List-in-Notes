@@ -1,0 +1,25 @@
+Glide Record in the business rule 
+
+
+for counting no of rows in the table use GlideAggregate 
+
+
+var as = new GlideAggregate('incident');
+
+// creating object for the glideaggregate 
+	as.addAggregate('COUNT');// addding count for the object 'as ' 
+		
+as.query();//quering the record 
+var countR=0;//setting the value to the zero 
+if(as.next())//
+{
+
+countR = as.getAggregate('COUNT');
+}
+
+gs.addInfoMessage('This is no of the records in the table incident'+ " "  + countR);
+
+
+
+
+Adela Cervantsz

@@ -1,0 +1,23 @@
+https://snprotips.com/blog/2016/2/6/gliderecord-client-side-vs-server-side
+
+
+
+
+https://community.servicenow.com/community?id=community_question&sys_id=691143e5db98dbc01dcaf3231f96190b
+
+
+
+
+				GlideAJAX 
+
+			CLIENT SIDE  + SERVER SIDE SCRIPT 
+
+	Glide Ajax ----> client side ---> replace only functionality --> boom--> client side performance 
+
+var gr = new GlideAjax('ScriptInclude');   return xml sheet contain values 
+-->//What GlideAjax is, is essentially just a way to construct an AJAX call which triggers a 
+client-callable Script Include on the ServiceNow servers, which then returns some value(s) back to the client. 
+
+
+
+glideajax object will return xml sheet will contain of lot of values 

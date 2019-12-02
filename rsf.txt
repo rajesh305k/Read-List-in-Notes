@@ -1,0 +1,34 @@
+addFunction(object Function)
+
+
+
+var builder = new GlideDBFunctionBuilder();/ / created object for the glidedbfunctionbuilder
+
+var mybuilder = builder.add();
+var mybuilder = builder.concat();
+var mybuilder = builder.dayofweek();
+
+
+
+1st condition 
+
+mybuilder = builder.field('priority');
+mybuilder = builder.field(5);
+mybuilder = builder.build();
+
+\\ build() it is used to check the database fucntionality 
+
+var recorrd = new GlideRecord('incident');
+ recorrd.addFunction(builder);
+
+recorrd.addquery(builder, '<',5);
+recorrd.query();
+
+
+while(recorrd.nextJ())
+{
+gs.log(recorrd.getValue(myAddingFunction));
+
+}
+
+

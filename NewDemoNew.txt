@@ -1,0 +1,73 @@
+taskLIKEINC
+
+taskLIKEINC
+
+var NewDemoNew = Class.create();
+NewDemoNew.prototype = {
+	demo1: function(val){
+		var grr = new GlideRecord('task_sla');		
+grr.addEncodedQuery('taskLIKEINC');//matching task records contains INC means only incident numbers 
+		grr.addQuery("task",val);
+		grr.query();
+while (grr.next()){
+	var bus = grr.business_percentage;
+	if(bus>1&&bus<50||bus==50)
+		return true;	
+}
+	},
+demo2: function(val){
+		var grr = new GlideRecord('task_sla');
+	grr.addEncodedQuery('taskLIKEINC');
+	grr.addQuery("task",val);
+     grr.query();
+while (grr.next()){
+	var bus = grr.business_percentage;
+	if(bus>50&&bus<75||bus==75)
+		return true;
+}},				
+demo3: function(val){
+		var grr = new GlideRecord('task_sla');
+		grr.addEncodedQuery('taskLIKEINC');
+		grr.addQuery("task",val);
+		grr.query();
+while (grr.next()){
+	var bus = grr.business_percentage;
+	if(bus>75&&bus<100)
+		return true;	
+}},		
+demo4: function(val){
+		var grr = new GlideRecord('task_sla');
+		grr.addEncodedQuery('taskLIKEINC');
+		grr.addQuery("task",val);
+		grr.query();
+while (grr.next()){
+var bus = grr.business_percentage;
+	 if(bus>=100)
+		return true;	
+}		
+},
+		  type: 'NewDemoNew'
+};
+
+
+
+
+
+
+
+https://dev60337.service-now.com/task_sla_list.do?sysparm_query=sla.target%3Dresolution
+
+
+
+
+
+
+
+
+
+
+
+
+task=3b4014dfdb2080107531fe1b68961990^sla.target=resolution
+
+sla.target=resolution

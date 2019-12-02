@@ -1,0 +1,35 @@
+GlideDBFunctionBuilder
+add() method adds two or more integers to the glidedbfunctionbuilder
+
+
+var mg = new GlideDBFunctionBuilder();
+use the method 
+
+addFucntionJ();
+ to he glidedbfunction builder constructor 
+
+var myAdditionalFunction = mg.add();
+
+myAdditonalFunction = mg.field('order');
+myAdditoinalFunction = mg.field('priority');
+myAdditionalFunction = mg.build();
+
+
+glidedbfunctionbuilder ----> object 
+
+var idh = new GlideDBFunctionBuilder();
+var raj =idh.add();   // adds two or more integers 
+raj = idh.field('priority');
+raj  = idh.field('caller');
+raj = idh.build(); // builds database of the function 
+
+
+var msf= idh.dayofweek();
+msf =idh.field('opened_at_weekend');
+
+
+gr.addFunction(msf);
+gr.query();
+while(gr.next())
+{
+gs.log(gr.getValue(msf));

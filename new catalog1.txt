@@ -1,0 +1,33 @@
+access (category)                no errors 
+
+work place equipmemt (category)  no errors 
+
+
+
+services  (category)  
+
+restore file or folder ---> justification is present in third field it should be 
+                             present in fourth field after date/time field (no justification 
+                           is defined in excel)
+                            from excel sheet v0.9
+                            there are only two fields 
+                           1.location and name of missing file  or folder (free text )
+                           2.date and time when last time it was present 
+
+
+but when we come into actual dev instance there are 6 fields
+1.name of file/folder 
+2.location of file/folder 
+3.justification required 
+4.date and time when the file or folder was last present 
+5.watch list 
+6.additional email 
+
+vendor master data request ---> in the excel third field is vendor form (file upload ) label
+                                but in catalog it is present in fourth place 
+
+other (category)                 no errors 
+
+software (category )             no errors 
+can u please check the name and service catalog item in *EXCEL SHEET*  (some are mismatched)
+ in software (category)

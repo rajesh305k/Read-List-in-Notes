@@ -1,0 +1,24 @@
+<p id ="demo"></p>
+
+
+
+<button type = "button"
+onclick ="fucntion()" > Submit </button>
+<script>
+function validateNumberJ()
+{
+
+var x, text;
+
+x=document.getElementById("numb").value
+
+if(isNaN(x) || x < 1|| x>10)
+{
+text =" input is not valid";
+}
+else 
+{
+text = " input ok";
+}
+document.getElementById("demo").innerHTML= text;
+}

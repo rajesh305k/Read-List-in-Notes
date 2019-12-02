@@ -1,0 +1,28 @@
+incident task sla color coding test observations 
+
+inc0017462-- 167.33% --- task sla (breached ) red 
+inc0017465-- 0.65% --- green color(paused )
+inc0017460 --- 172.01% --- red (breached ) in progress
+inc0017459 -- 172.01 % --- red (breached ) in progress
+inc0017424 -- 978.78% --- red (breached ) in progress 
+inc0017268 -- 976.22% --- red (breached ) in progress 
+inc0017434 -- task sla was removed 
+
+wherever i see a common thing in the activities 
+norway priority 4 resolution (40 ) was removed
+norway priority 4 response (40) was removed 
+task sla netherlands priority 4 resolution (40 hr ) was removed 
+
+inc0017281 --- orange -- 87.33% --- task sla (not yet breached ) 
+inc0017272 -- orange -- 87.22% --- task sla (not yet breached) 
+inc0017191 --- green --- 0.65% -- task sla pending ( awaiting caller ) 
+inc0015598 --- green --- 19.22% -- task sla paused 
+inc0012689 --- green --- 4.41% --- task sla paused 
+inc0011643 --- red --- 1003.34% --- task sla inprogress 
+
+created another severe priority incident to check status 
+inc0017469 ----yellow --- 50.06% --- task sla (in progress) 
+
+Everything works fine with task sla color coding 
+
+Testing on catalog items implemented in dev is completed .
